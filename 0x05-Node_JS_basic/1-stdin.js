@@ -10,4 +10,4 @@ rl.question("Welcome to Holberton School, what is your name?"+"\n",
         console.log("Your name is:", answer);
         console.log("This important software is now closing");
         rl.close()
-})
+});
