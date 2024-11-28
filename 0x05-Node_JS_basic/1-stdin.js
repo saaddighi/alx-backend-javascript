@@ -5,14 +5,13 @@ const rl = redline.createInterface({
     output: process.stdout
 });
 
-process.on("SIGINT", () => {
-    console.log("\nThank you for using the program! Closing now...");
-    rl.close();
-    process.exit();
-})
-
 rl.question("Welcome to Holberton School, what is your name?"+"\n", 
     function(answer){
         console.log("Your name is:", answer);
         rl.close()
 });
+
+rl.on('close', function(){
+    console.log("\nThis important software is now closing");
+    process.exit(0)
+})
