@@ -11,7 +11,7 @@ rl.question("Welcome to Holberton School, what is your name?"+"\n",
         rl.close()
 });
 
-rl.on('close', function(){
+rl.on('SIGINT', function(){
     console.log("\nThis important software is now closing");
     process.exit(0)
 })
